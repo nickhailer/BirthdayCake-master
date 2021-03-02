@@ -133,9 +133,42 @@ public class CakeView extends SurfaceView {
         //Then a second cake layer
         canvas.drawRect(cakeLeft, top, cakeLeft + cakeWidth, bottom, cakePaint);
 
-        //Now a candle in the center
-        drawCandle(canvas, cakeLeft + cakeWidth/3 - candleWidth/3, cakeTop);
-        drawCandle(canvas, cakeLeft + cakeWidth*2/3 - candleWidth*2/3, cakeTop);
+        //Now candle(s)
+        switch (obj.numCandles) {
+            case 0:
+                break;
+
+            case 1:
+                drawCandle(canvas, cakeLeft + cakeWidth/2 - candleWidth/2, cakeTop);
+                break;
+
+            case 2:
+                drawCandle(canvas, cakeLeft + cakeWidth/3 - candleWidth/3, cakeTop);
+                drawCandle(canvas, cakeLeft + cakeWidth*2/3 - candleWidth*2/3, cakeTop);
+                break;
+
+            case 3:
+                drawCandle(canvas, cakeLeft + cakeWidth/4 - candleWidth/4, cakeTop);
+                drawCandle(canvas, cakeLeft + cakeWidth/2 - candleWidth/2, cakeTop);
+                drawCandle(canvas, cakeLeft + cakeWidth*3/4 - candleWidth*3/4, cakeTop);
+                break;
+
+            case 4:
+                drawCandle(canvas, cakeLeft + cakeWidth/5 - candleWidth/5, cakeTop);
+                drawCandle(canvas, cakeLeft + cakeWidth*2/5 - candleWidth*2/5, cakeTop);
+                drawCandle(canvas, cakeLeft + cakeWidth*3/5 - candleWidth*3/5, cakeTop);
+                drawCandle(canvas, cakeLeft + cakeWidth*4/5 - candleWidth*4/5, cakeTop);
+                break;
+
+            case 5:
+                drawCandle(canvas, cakeLeft + cakeWidth/6 - candleWidth/6, cakeTop);
+                drawCandle(canvas, cakeLeft + cakeWidth*1/3 - candleWidth*1/3, cakeTop);
+                drawCandle(canvas, cakeLeft + cakeWidth/2 - candleWidth/2, cakeTop);
+                drawCandle(canvas, cakeLeft + cakeWidth*2/3 - candleWidth*2/3, cakeTop);
+                drawCandle(canvas, cakeLeft + cakeWidth*5/6 - candleWidth*5/6, cakeTop);
+                break;
+        }
+
 
     }//onDraw
 
