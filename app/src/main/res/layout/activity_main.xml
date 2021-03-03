@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20px"
                 android:gravity="right"
-                android:text="Blow Out" />
+                android:text="Extinguish" />
 
             <Button
                 android:id="@+id/button2"
